@@ -14,7 +14,9 @@ hugo $1
 
 mkdir "${HOME}/.ssh"
 echo "${VPS_DEPLOY_KEY}" > "${HOME}/.ssh/id_rsa_deploy"
+echo "${VPS_DEPLOY_KEY_PUB}" > "${HOME}/.ssh/id_rsa_deploy.pub"
 chmod 600 "${HOME}/.ssh/id_rsa_deploy"
+chmod 600 "${HOME}/.ssh/id_rsa_deploy.pub"
 
 rsync --version
 sh -c "
