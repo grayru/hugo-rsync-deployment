@@ -21,7 +21,7 @@ sh -c "
 rsync $2 \
   -e 'ssh -i ${HOME}/.ssh/id_rsa_deploy -o StrictHostKeyChecking=no' \
   ${GITHUB_WORKSPACE}/public \
-  ${VPS_DEPLOY_USER}@${VPS_DEPLOY_HOST}:${VPS_DEPLOY_DEST}
+  ${VPS_DEPLOY_USER}@${VPS_DEPLOY_HOST}:${VPS_DEPLOY_DEST} --progress
 "
 
 exit 0
